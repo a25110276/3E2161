@@ -1,0 +1,66 @@
+lass Juego
+class Nivel
+class MotorJuego
+class Pantalla
+class Camara
+
+class Personaje
+class Batman
+class Enemigo
+class Jefe
+class Joker
+
+class PayasoEnemigo
+class RobotEnemigo
+class Mutante
+class EnemigoVolador
+
+class Arma
+class Batarang
+class Proyectil
+class PistolaEnemiga
+
+class Vida
+class Energia
+class Puntaje
+class HUD
+
+class Fisica
+class Colision
+class Movimiento
+class Salto
+class EscaladaPared
+class Sonido
+
+Batman --|> Personaje
+Enemigo --|> Personaje
+Jefe --|> Enemigo
+Joker --|> Jefe
+
+PayasoEnemigo --|> Enemigo
+RobotEnemigo --|> Enemigo
+Mutante --|> Enemigo
+EnemigoVolador --|> Enemigo
+
+Batarang --|> Arma
+Proyectil --|> Arma
+PistolaEnemiga --|> Arma
+
+Juego *-- Nivel
+Juego *-- MotorJuego
+Batman *-- Vida
+Batman *-- Energia
+Batman *-- Puntaje
+HUD *-- Vida
+HUD *-- Puntaje
+Nivel *-- Enemigo
+MotorJuego *-- Fisica
+Fisica *-- Colision
+
+Batman o-- Batarang
+Enemigo o-- Movimiento
+Batman o-- EscaladaPared
+Batman o-- Salto
+Nivel o-- Sonido
+Juego o-- Pantalla
+Juego o-- Camara
