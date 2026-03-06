@@ -1,3 +1,4 @@
+@startuml batman 1989
 lass Juego
 class Nivel
 class MotorJuego
